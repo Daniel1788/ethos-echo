@@ -1,0 +1,89 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 34,
+    "spacing": 4,
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["group/media", "sway/window"],
+    "modules-right": ["pulseaudio", "backlight", "network", "bluetooth", "battery", "clock", "tray"],
+
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{name}",
+	    "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
+        }
+    },
+    "clock": {
+        "format": "  {:%H:%M}",
+        "format-alt": "  {:%A, %d %B %Y}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>"
+    },
+    "network": {
+        "format-wifi": "󰤨  {essid}",
+        "format-ethernet": "󰈀  LAN",
+        "format-linked": "󰈁  Wired",
+        "format-disconnected": "󰌙  Offline",
+        "tooltip-format": "IP: {ipaddr} | Interfață: {ifname}"
+    },
+    "bluetooth": {
+        "format": "󰂯  {status}",
+        "format-disabled": "󰂲  Off",
+        "format-connected": "󰂱  {device_alias}",
+        "tooltip-format": "{controller_alias}\t{controller_address}\n\nConexiuni: {num_connections}",
+        "on-click": "blueman-manager"
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}  {capacity}%",
+        "format-charging": "󰂄  {capacity}%",
+        "format-plugged": "󰚥  {capacity}%",
+        "format-icons": ["󰂎", "󰁺", "󰁽", "󰂀", "󰁹"],
+        "tooltip-format": "Remaining: {time}\nUsing: {power} W"
+    },
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-bluetooth": "  {volume}%",
+        "format-muted": " Muted",
+        "format-icons": {
+            "headphone": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "backlight": {
+        "format": "{icon}  {percent}%",
+        "format-icons": ["", ""]
+    },
+    "group/media": {
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 300,
+            "transition-left-to-right": true
+        },
+        "modules": [
+            "custom/music-icon",
+            "mpris"
+        ]
+    },
+    "custom/music-icon": {
+        "format": "󰝚",
+        "tooltip": false
+    },
+    "mpris": {
+        "format": "{status_icon} {artist} - {title}",
+        "max-length": 45,
+        "status-icons": {
+            "paused": "▶",
+            "playing": "⏸"
+        }
+    }
+}

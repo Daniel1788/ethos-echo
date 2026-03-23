@@ -1,0 +1,13 @@
+@define-color foreground #fbf1c7;
+@define-color background #1d2021;
+@define-color cursor #d79921;
+
+@define-color color0 #282828; /* Black (bg) */
+@define-color color1 #cc241d; /* Red (standard gruvbox) */
+@define-color color2 #98971a; /* Green */
+@define-color color3 #d79921; /* Yellow/Gold (cel din imaginea ta) */
+@define-color color4 #458588; /* Blue */
+@define-color color5 #b16286; /* Purple */
+@define-color color6 #689d6a; /* Aqua */
+@define-color color7 #a89984; /* Gray */
+

@@ -1,0 +1,61 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "MesloLGS Nerd Font", monospace;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ebdbb2;
+}
+
+window#waybar {
+    background-color: #282828;
+    border-bottom: 2px solid #3c3836;
+}
+
+#workspaces button {
+    padding: 0 12px;
+    background-color: transparent;
+    color: #a89984;
+    border-bottom: 3px solid transparent;
+}
+
+#workspaces button.focused {
+    color: #ebdbb2;
+    border-bottom: 3px solid #d79921; /* Subliniere portocalie pentru spațiul activ */
+}
+
+/* Stil pentru modulele din dreapta (Pilule) */
+#clock, #battery, #network, #pulseaudio, #backlight, #bluetooth, #tray {
+    padding: 0 12px;
+    margin: 4px 4px;
+    background-color: #3c3836; /* Un gri puțin mai deschis decât fundalul */
+    border-radius: 12px;
+    color: #ebdbb2;
+}
+
+/* Culori de avertizare pentru baterie */
+#battery.warning { color: #fabd2f; }
+#battery.critical { color: #cc241d; animation-name: blink; animation-duration: 0.5s; animation-timing-function: linear; animation-iteration-count: infinite; animation-direction: alternate; }
+
+@keyframes blink {
+    to { background-color: #cc241d; color: #ebdbb2; }
+}
+
+#custom-music-icon {
+    padding: 0 14px;
+    background-color: #3c3836;
+    color: #d79921; 
+    border-radius: 12px;
+}
+
+#mpris {
+    padding: 0 12px;
+    background-color: #3c3836;
+    color: #ebdbb2;
+    border-radius: 12px;
+    margin-left: 4px;
+}
+
+#mpris.paused {
+    color: #a89984;
+}

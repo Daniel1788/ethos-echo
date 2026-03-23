@@ -1,0 +1,25 @@
+# - --------- -
+# - Autostart -
+# - --------- -
+
+# Run with every reload
+exec_always {
+    killall waybar; waybar
+}
+
+# Run once on login
+exec {
+    waybar
+    wl-paste --type text --watch cliphist store &
+    wl-paste --type image --watch cliphist store &
+
+    # Night Light
+    gammastep -O 5500 &
+
+    autotiling &
+
+    # Notificări (Mako este perfect pentru Gruvbox)
+    mako &
+}
+
+# vim:set ft=conf:
