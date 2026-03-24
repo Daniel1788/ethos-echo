@@ -166,6 +166,7 @@ system_update() {
         local tmp_dir
         tmp_dir=$(mktemp -d)
         git clone https://aur.archlinux.org/yay.git "$tmp_dir/yay" 2>&1 | tee -a "$LOG_FILE"
+        chown -R "$USER_NAME:$USER_NAME" "$tmp_dir"
         pushd "$tmp_dir/yay" >/dev/null
         sudo -u "$USER_NAME" makepkg -si --noconfirm 2>&1 | tee -a "$LOG_FILE"
         popd >/dev/null
