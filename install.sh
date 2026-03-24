@@ -203,7 +203,6 @@ install_packages() {
     # ── Terminal & Shell ──
     local TERMINAL=(
         foot               # Lightest GPU-accelerated terminal
-        fish               # Friendly interactive shell
         starship           # Cross-shell prompt
     )
 
@@ -234,7 +233,6 @@ install_packages() {
     local NETWORK=(
         networkmanager
         network-manager-applet
-        nmtui
     )
 
     # ── Audio ──
@@ -328,7 +326,6 @@ install_packages() {
     # ── Theming ──
     local THEME=(
         gnome-themes-extra    # GTK themes
-        gtk-engine-murrine
         papirus-icon-theme
         kvantum               # Qt theming
         qt5ct
@@ -366,7 +363,6 @@ install_packages() {
     # ── Wayland Extras ──
     local WAYLAND=(
         wayland-protocols
-        wlroots
         xorg-xwayland         # XWayland for legacy apps
         qt5-wayland
         qt6-wayland
