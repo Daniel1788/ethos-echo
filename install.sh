@@ -45,7 +45,7 @@ echo ">>> Building base Sway configuration..."
 git clone https://github.com/Daniel1788/ethos-echo.git
 mkdir -p ~/.config
 mkdir -p ~/Pictures/
-mv sway .config
-mv foot .config
-mv waybar .config
+mv sway ~/.config
+mv foot ~/.config
+mv waybar ~/.config
 mv background.jpg Pictures
