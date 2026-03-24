@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "========================================================"
-echo " Starting Minimal Sway Setup for Acer Aspire 5 (Intel)"
+echo " Starting Minimal Sway Setup"
 echo "========================================================"
 
 # 1. Update system and install packages
@@ -28,12 +28,6 @@ cat <<'EOF' >~/.config/fontconfig/fonts.conf
       <family>Inter</family>
     </prefer>
   </alias>
-  <alias>
-    <family>ui-sans-serif</family>
-    <prefer>
-      <family>Inter</family>
-    </prefer>
-  </alias>
 </fontconfig>
 EOF
 
@@ -45,7 +39,7 @@ echo ">>> Building base Sway configuration..."
 git clone https://github.com/Daniel1788/ethos-echo.git
 mkdir -p ~/.config
 mkdir -p ~/Pictures/
-mv sway ~/.config
-mv foot ~/.config
-mv waybar ~/.config
-mv background.jpg Pictures
+mv ethos-echo/sway ~/.config
+mv ethos-echo/foot ~/.config
+mv ethos-echo/waybar ~/.config
+mv ethos-echo/background.jpg Pictures
