@@ -11,7 +11,6 @@ GREEN='\033[32m'
 
 command_exists() {
 for cmd in "$@"; do
-    export PATH="$HOME/.local/share/flatpak/exports/bin:/var/lib/flatpak/exports/bin:$PATH"
     command -v "$cmd" >/dev/null 2>&1 || return 1
 done
 return 0
@@ -189,7 +188,7 @@ clone_config_folders() {
     # Ensure the target directories exist
     [ ! -d ~/.config ] && mkdir -p ~/.config
     [ ! -d ~/.local/bin ] && mkdir -p ~/.local/bin
-    
+
     # Store the repo path in a variable for safety
     REPO_DIR="$HOME/.local/share/dwm-gossamer"
 
