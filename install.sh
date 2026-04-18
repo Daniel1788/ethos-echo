@@ -150,6 +150,7 @@ makeDWM() {
     cd "$HOME/.local/share/dwm-gossamer/slstatus"
     "$ESCALATION_TOOL" make clean install
     cd "$HOME/.local/share/dwm-gossamer"
+    mkdir -p "$HOME/Pictures/backgrounds/"
     cp background.jpg "$HOME/Pictures/backgrounds/"
 }
 
@@ -225,4 +226,3 @@ setupDWM
 makeDWM
 install_nerd_font
 clone_config_folders
-
