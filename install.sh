@@ -131,10 +131,10 @@ setupDWM() {
               base-devel git linux-headers unzip curl wget \
               xorg-server xorg-xinit xorg-xrandr xorg-xsetroot xorg-xprop xorg-xset xorg-xhost xf86-input-libinput \
               libx11 libxinerama libxft libxcb imlib2 fontconfig freetype2 \
-              polybar picom dunst rofi dmenu slock alacritty st xdo xdotool autocutsel \
+              polybar picom dunst rofi dmenu slock alacritty xdo xdotool \
               feh flameshot imagemagick ffmpeg playerctl \
               btop htop arandr xclip xsel xarchiver thunar tumbler gvfs thunar-archive-plugin \
-              tldr dex nwg-look xscreensaver xfontsel brightnessctl acpi \
+              tldr dex nwg-look xscreensaver brightnessctl acpi \
               xdg-user-dirs xdg-desktop-portal-gtk xdg-utils \
               firefox mate-polkit alsa-utils pavucontrol pipewire gnome-keyring flatpak \
               networkmanager network-manager-applet openssh nvim \
