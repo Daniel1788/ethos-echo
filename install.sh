@@ -127,7 +127,20 @@ setupDWM() {
     printf "%b\n" "${YELLOW}Installing dwm-gossamer...${RC}"
     case "$PACKAGER" in # Install pre-Requisites
         pacman)
-            "$ESCALATION_TOOL" "$PACKAGER" -S --needed --noconfirm firefox base-devel libx11 libxinerama libxft imlib2 libxcb git unzip flameshot nwg-look feh mate-polkit alsa-utils alacritty rofi btop arandr xclip xarchiver thunar tumbler tldr gvfs thunar-archive-plugin dunst dex xscreensaver xorg-xprop xorg-xrandr xorg-xsetroot xorg-xset polybar picom xdg-user-dirs xdg-desktop-portal-gtk pipewire pavucontrol gnome-keyring flatpak networkmanager network-manager-applet noto-fonts-emoji fastfetch starship zoxide
+            "$ESCALATION_TOOL" "$PACKAGER" -S --needed --noconfirm \
+              base-devel git linux-headers unzip curl wget \
+              xorg-server xorg-xinit xorg-xrandr xorg-xsetroot xorg-xprop xorg-xset xorg-xhost xf86-input-libinput \
+              libx11 libxinerama libxft libxcb imlib2 fontconfig freetype2 \
+              polybar picom dunst rofi dmenu slock alacritty st xdo xdotool autocutsel \
+              feh flameshot imagemagick ffmpeg playerctl \
+              btop htop arandr xclip xsel xarchiver thunar tumbler gvfs thunar-archive-plugin \
+              tldr dex nwg-look xscreensaver xfontsel brightnessctl acpi \
+              xdg-user-dirs xdg-desktop-portal-gtk xdg-utils \
+              firefox mate-polkit alsa-utils pavucontrol pipewire gnome-keyring flatpak \
+              networkmanager network-manager-applet openssh nvim \
+              fzf bat fd \
+              ttf-meslo-nerd ttf-liberation ttf-dejavu noto-fonts noto-fonts-emoji terminus-font \
+              fastfetch starship zoxide man-db
             ;;
         *)
             printf "%b\n" "${RED}Unsupported package manager: ""$PACKAGER""${RC}"
